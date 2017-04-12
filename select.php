@@ -8,6 +8,7 @@ $dbname = "ad_7c1f0caae9b13ee";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
+    print($conn) ; 
     die("Connection failed: " . $conn->connect_error);
 } 
 

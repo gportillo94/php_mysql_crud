@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<a href="select.php">Select</a>
+	<a href="select.php">Select</a><br />
 	<a href="insert.html">Insert</a>
 </body>
 </html>
