@@ -6,7 +6,12 @@
 <body>
     <h3>select</h3>
     <?php
+    
+        print($_ENV["VCAP_SERVICES"]) ;
+        print("-----------------------------------------------");  
         print($_ENV["VCAP_SERVICES"]["cleardb"]) ; 
+        print($_ENV["VCAP_SERVICES"]["cleardb"][0]) ; 
+
         $servername = "us-cdbr-iron-east-03.cleardb.net";
         $username = "bfd1849f40443a";
         $password = "fcae7675";
