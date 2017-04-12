@@ -14,16 +14,20 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 
-	// prepare and bind
-	$stmt = $conn->prepare("INSERT INTO directorio (clave, nombre, direccion, telefono, correo) VALUES (?, ?, ?, ?, ?)");
-	$stmt->bind_param("issss", $clave, $nombre, $direccion, $telefono, $correo);
-
-	// set parameters and execute
 	$clave = $_POST["clave"];
 	$nombre = $_POST["nombre"];
 	$direccion = $_POST["direccion"];
 	$telefono = $_POST["telefono"];
 	$correo = $_POST["correo"];
+
+
+
+	// prepare and bind
+	$stmt = $conn->prepare("INSERT INTO diccionario (clave, nombre, correo, direccion, telefono) VALUES (?, ?, ?, ?, ?)");
+	$stmt->bind_param("issss", $clave, $nombre, $direccion, $telefono, $correo);
+
+	// set parameters and execute
+	
 	$stmt->execute();
 
 	echo "successfully";
