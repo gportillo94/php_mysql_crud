@@ -7,10 +7,8 @@
     <h3>select</h3>
     <?php
 
-        $cred = $_ENV["VCAP_SERVICES"] ; 
-        gettype($cred) ; 
-        $jsoncred = json_decode($cred) ; 
-        print($jsoncred) ; 
+        $cred = json_decode($_ENV['VCAP_SERVICES'], true);
+        print($cred['cleardb']); 
 
         $servername = "us-cdbr-iron-east-03.cleardb.net";
         $username = "bfd1849f40443a";
